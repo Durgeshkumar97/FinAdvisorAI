@@ -1,4 +1,4 @@
-# Generative AI for Personalized Financial Advising and Investment Strategies
+# FinAdvisorAI: Generative AI for Personalized Financial Advising and Investment Strategies
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
@@ -21,7 +21,7 @@
 
 to generate transparent and interpretable financial insights.
 
-The project explores how modern AI architectures can support **personalized financial advisory systems** through structured market data and financial language modeling.
+The project explores how modern AI architectures can support **personalized financial advisory systems** using structured market data and financial language modeling.
 
 ---
 
@@ -72,7 +72,7 @@ The project explores how modern AI architectures can support **personalized fina
 
 * DistilBERT
 * DistilRoBERTa
-* Transformer Encoder (custom Keras implementation)
+* Custom Transformer Encoder (Keras)
 
 ### Data
 
@@ -83,10 +83,10 @@ The project explores how modern AI architectures can support **personalized fina
 
 ## Repository Structure
 
-```bash
+```bash id="k9w3es"
 FinAdvisorAI/
 │
-├── FinalThesisModeljune.ipynb               # Main notebook: training + evaluation
+├── FinalThesisModeljune.ipynb               # Main notebook: model training and evaluation
 ├── Final_thesis_Durgesh_kumar_citaions.pdf  # Full thesis documentation
 ├── requirements.txt                         # Environment dependencies
 ├── README.md                                # Project documentation
@@ -110,21 +110,19 @@ Technical indicators include:
 
 ### Tabular-to-Text Conversion
 
-Structured market signals are converted into textual financial narratives such as:
+Structured market signals are transformed into textual financial narratives such as:
 
 > "RSI is elevated, MACD indicates bullish crossover, and volume is increasing."
 
-This enables transformer fine-tuning on financial state descriptions.
+This allows transformer models to learn market states through language representations.
 
 ### Transformer Layer
 
-Includes:
+Implemented using custom Keras transformer components with:
 
 * positional encoding
 * multi-head attention
 * feed-forward blocks
-
-Implemented using custom Keras transformer components.
 
 ### Explainability Layer
 
@@ -137,7 +135,7 @@ Predictions are accompanied by:
 
 ## Example Output
 
-```text
+```text id="jfrx7q"
 The model predicts a bullish move with 83% confidence.
 Primary drivers: MACD crossover, low RSI, increasing volume.
 SHAP identifies MACD and Bollinger Band width as dominant features.
@@ -147,19 +145,21 @@ SHAP identifies MACD and Bollinger Band width as dominant features.
 
 ## Performance Summary
 
-| Model               | Task           | Metric                 | Notes                                          |
-| ------------------- | -------------- | ---------------------- | ---------------------------------------------- |
-| LightGBM            | Regression     | R² = 0.996             | Strong baseline on engineered NIFTY50 features |
-| Transformer (Keras) | Regression     | R² = 0.987             | Custom encoder architecture                    |
-| DistilBERT          | Classification | F1 = 0.75 / AUC = 0.83 | Fine-tuned on generated financial text         |
-| DistilBERT          | Regression     | R² = 0.952             | Text-to-price mapping                          |
-| SHAP / LIME         | Explainability | Feature attribution    | Prediction transparency                        |
+| Model               | Task           | Metric                 | Notes                                                              |
+| ------------------- | -------------- | ---------------------- | ------------------------------------------------------------------ |
+| LightGBM            | Regression     | R² = 0.996             | Engineered feature benchmark using highly correlated market inputs |
+| Transformer (Keras) | Regression     | R² = 0.987             | Sequence-based regression on temporal financial features           |
+| DistilBERT          | Classification | F1 = 0.75 / AUC = 0.83 | Binary directional classification on generated financial text      |
+| DistilBERT          | Regression     | R² = 0.952             | Regression using textualized financial indicator representation    |
+| SHAP / LIME         | Explainability | Feature attribution    | Used for model transparency                                        |
+
+> Metrics are reported on held-out evaluation data within the current experimental setup.
 
 ---
 
 ## Research Contributions
 
-* Financial transformer adaptation for structured + textual signals
+* Financial transformer adaptation for structured and textual signals
 * Explainable AI integration for model transparency
 * Tabular-to-text financial encoding pipeline
 * Statistical feature dependency analysis
@@ -171,6 +171,7 @@ SHAP identifies MACD and Bollinger Band width as dominant features.
 * Focused on NIFTY50 market environment
 * Limited external sentiment integration
 * Regulatory deployment layer not yet implemented
+* Future evaluation should include stricter time-series validation
 
 ---
 
@@ -189,14 +190,14 @@ SHAP identifies MACD and Bollinger Band width as dominant features.
 
 ### Clone repository
 
-```bash
+```bash id="czj4al"
 git clone https://github.com/Durgeshkumar97/FinAdvisorAI.git
 cd FinAdvisorAI
 ```
 
 ### Create environment
 
-```bash
+```bash id="kg8qjk"
 python -m venv venv
 ```
 
@@ -204,25 +205,25 @@ python -m venv venv
 
 **Linux / Mac**
 
-```bash
+```bash id="r1wzhu"
 source venv/bin/activate
 ```
 
 **Windows**
 
-```bash
+```bash id="8aq89n"
 venv\Scripts\activate
 ```
 
 ### Install dependencies
 
-```bash
+```bash id="lx6l6e"
 pip install -r requirements.txt
 ```
 
 ### Launch notebook
 
-```bash
+```bash id="9e2yhe"
 jupyter notebook FinalThesisModeljune.ipynb
 ```
 
@@ -249,6 +250,11 @@ MIT License
 This repository is based on:
 
 **Generative AI for Personalized Financial Advising and Investment Strategies**
+
+---
+
+If this work is useful in your research or development, a star is appreciated.
+
 
 ---
 
