@@ -4,9 +4,9 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-yellow)
 ![Finance](https://img.shields.io/badge/Domain-Quantitative_Finance-darkgreen)
-![XAI](https://img.shields.io/badge/Explainability-SHAP%20%7C%20LIME-red)
+![XAI](https://img.shields.io/badge/Explainability-SHAP%20%7C%20LIME-red)   
 
-> A research-grade AI framework for stock trend forecasting, transformer-based financial reasoning, and explainable investment insight generation.
+> A research-grade AI framework for stock trend forecasting, transformer-based financial reasoning, and explainable investment insight generation. 
 
 ---
 
@@ -21,7 +21,7 @@
 
 to generate transparent and interpretable financial insights.
 
-The project explores how modern AI architectures can support **personalized financial advisory systems** using structured market data and financial language modeling.
+The project explores how modern AI architectures can support **personalized financial advisory systems** using structured market data and financial language modeling. 
 
 ---
 
@@ -221,7 +221,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### Launch notebook
+### Launch notebook ---
 
 ```bash id="9e2yhe"
 jupyter notebook FinalThesisModeljune.ipynb
